@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="06934736ca334e72b280a9532e7f6d0d" Name="Diagram1">
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMAppSettings" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMCategoryMaster" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMDatabases" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMLinkCategory" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMLinks" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMModules" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMOption" Width="1.5" PointX="9.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMReportPages" Width="1.5" PointX="9.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMReports" Width="1.5" PointX="14.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMReportsCategory" Width="1.5" PointX="12" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMRoleLink" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMRoleLinkOptions" Width="1.5" PointX="12" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMRoles" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMUserRoles" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMUsers" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ADMUserSettings" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.sysdiagrams" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.RoleLinkOptionView" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.UserLinkOptionsView" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActSysAdminModel.ViewUserRolesList" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMRoles_ADMCategoryMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_CategoryMaster_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_LinkCategory_CategoryMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_Links_LinkCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMRoleLink_ADMLinks" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_Links_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_Users_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMRoleLinkOptions_ADMOption" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ReportsCategory_ReportPages" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_Reports_ReportsCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMRoleLink_ADMRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMRoleLinkOptions_ADMRoleLink" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_UserRoles_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_UserRoles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ActSysAdminModel.FK_ADMUserSettings_ADMUsers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

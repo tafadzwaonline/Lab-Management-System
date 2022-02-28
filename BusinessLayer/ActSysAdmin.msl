@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ActSysAdminModelStoreContainer" CdmEntityContainer="ActSysAdminEntities">
+    <EntitySetMapping Name="ADMCategoryMaster">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMCategoryMaster">
+        <MappingFragment StoreEntitySet="ADMCategoryMaster">
+          <ScalarProperty Name="CategoryMasterID" ColumnName="CategoryMasterID" />
+          <ScalarProperty Name="CategoryMasterNameAr" ColumnName="CategoryMasterNameAr" />
+          <ScalarProperty Name="CategoryMasterNameEn" ColumnName="CategoryMasterNameEn" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="FKModuleId" ColumnName="FKModuleId" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMLinkCategory">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMLinkCategory">
+        <MappingFragment StoreEntitySet="ADMLinkCategory">
+          <ScalarProperty Name="LinkCategoryID" ColumnName="LinkCategoryID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LinkCategoryAName" ColumnName="LinkCategoryAName" />
+          <ScalarProperty Name="LinkCategoryEName" ColumnName="LinkCategoryEName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="FKCategoryMasterID" ColumnName="FKCategoryMasterID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMLinks">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMLinks">
+        <MappingFragment StoreEntitySet="ADMLinks">
+          <ScalarProperty Name="LinksID" ColumnName="LinksID" />
+          <ScalarProperty Name="LinksAName" ColumnName="LinksAName" />
+          <ScalarProperty Name="LinksEName" ColumnName="LinksEName" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="LinkIcon" ColumnName="LinkIcon" />
+          <ScalarProperty Name="ActiveLink" ColumnName="ActiveLink" />
+          <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+          <ScalarProperty Name="FKLinkCategoryID" ColumnName="FKLinkCategoryID" />
+          <ScalarProperty Name="FKModuleID" ColumnName="FKModuleID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMModules">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMModules">
+        <MappingFragment StoreEntitySet="ADMModules">
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ModuleAName" ColumnName="ModuleAName" />
+          <ScalarProperty Name="ModuleEName" ColumnName="ModuleEName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ModuleUrl" ColumnName="ModuleUrl" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMOption">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMOption">
+        <MappingFragment StoreEntitySet="ADMOption">
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="OptionAName" ColumnName="OptionAName" />
+          <ScalarProperty Name="OptionEName" ColumnName="OptionEName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMReportPages">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMReportPages">
+        <MappingFragment StoreEntitySet="ADMReportPages">
+          <ScalarProperty Name="RPID" ColumnName="RPID" />
+          <ScalarProperty Name="RPCode" ColumnName="RPCode" />
+          <ScalarProperty Name="RPNameEn" ColumnName="RPNameEn" />
+          <ScalarProperty Name="RPNameAr" ColumnName="RPNameAr" />
+          <ScalarProperty Name="RPNotes" ColumnName="RPNotes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMReports">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMReports">
+        <MappingFragment StoreEntitySet="ADMReports">
+          <ScalarProperty Name="ReportsID" ColumnName="ReportsID" />
+          <ScalarProperty Name="ReportsCode" ColumnName="ReportsCode" />
+          <ScalarProperty Name="ReportsNameEn" ColumnName="ReportsNameEn" />
+          <ScalarProperty Name="ReportsNameAr" ColumnName="ReportsNameAr" />
+          <ScalarProperty Name="ReportsNotes" ColumnName="ReportsNotes" />
+          <ScalarProperty Name="ReportUrl" ColumnName="ReportUrl" />
+          <ScalarProperty Name="FKRreportCategoryID" ColumnName="FKRreportCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMReportsCategory">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMReportsCategory">
+        <MappingFragment StoreEntitySet="ADMReportsCategory">
+          <ScalarProperty Name="RCID" ColumnName="RCID" />
+          <ScalarProperty Name="RCCode" ColumnName="RCCode" />
+          <ScalarProperty Name="RCNameEn" ColumnName="RCNameEn" />
+          <ScalarProperty Name="RCNameAr" ColumnName="RCNameAr" />
+          <ScalarProperty Name="RCNotes" ColumnName="RCNotes" />
+          <ScalarProperty Name="FKReportPageID" ColumnName="FKReportPageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMRoleLink">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMRoleLink">
+        <MappingFragment StoreEntitySet="ADMRoleLink">
+          <ScalarProperty Name="RoleLinkID" ColumnName="RoleLinkID" />
+          <ScalarProperty Name="FKRoleID" ColumnName="FKRoleID" />
+          <ScalarProperty Name="FKLinkID" ColumnName="FKLinkID" />
+          <ScalarProperty Name="Arrange" ColumnName="Arrange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMRoleLinkOptions">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMRoleLinkOptions">
+        <MappingFragment StoreEntitySet="ADMRoleLinkOptions">
+          <ScalarProperty Name="RoleLinkOptionID" ColumnName="RoleLinkOptionID" />
+          <ScalarProperty Name="FKRoleLinkID" ColumnName="FKRoleLinkID" />
+          <ScalarProperty Name="FKOptionID" ColumnName="FKOptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMRoles">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMRoles">
+        <MappingFragment StoreEntitySet="ADMRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="RoleAName" ColumnName="RoleAName" />
+          <ScalarProperty Name="RoleEName" ColumnName="RoleEName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="FKModuleID" ColumnName="FKModuleID" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMUserRoles">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMUserRoles">
+        <MappingFragment StoreEntitySet="ADMUserRoles">
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="FKUserID" ColumnName="FKUserID" />
+          <ScalarProperty Name="FKRoleID" ColumnName="FKRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMUsers">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMUsers">
+        <MappingFragment StoreEntitySet="ADMUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EName" ColumnName="EName" />
+          <ScalarProperty Name="AName" ColumnName="AName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="PreferedLanguage" ColumnName="PreferedLanguage" />
+          <ScalarProperty Name="DefaultModule" ColumnName="DefaultModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewUserRolesList">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ViewUserRolesList">
+        <MappingFragment StoreEntitySet="ViewUserRolesList">
+          <ScalarProperty Name="LinksEName" ColumnName="LinksEName" />
+          <ScalarProperty Name="RoleLinkID" ColumnName="RoleLinkID" />
+          <ScalarProperty Name="FKLinkID" ColumnName="FKLinkID" />
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="FKModuleID" ColumnName="FKModuleID" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RoleEName" ColumnName="RoleEName" />
+          <ScalarProperty Name="RoleAName" ColumnName="RoleAName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleLinkOptionView">
+      <EntityTypeMapping TypeName="ActSysAdminModel.RoleLinkOptionView">
+        <MappingFragment StoreEntitySet="RoleLinkOptionView">
+          <ScalarProperty Name="OptionEName" ColumnName="OptionEName" />
+          <ScalarProperty Name="OptionAName" ColumnName="OptionAName" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="RoleLinkOptionID" ColumnName="RoleLinkOptionID" />
+          <ScalarProperty Name="Arrange" ColumnName="Arrange" />
+          <ScalarProperty Name="RoleLinkID" ColumnName="RoleLinkID" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="FKLinkCategoryID" ColumnName="FKLinkCategoryID" />
+          <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+          <ScalarProperty Name="ActiveLink" ColumnName="ActiveLink" />
+          <ScalarProperty Name="LinkIcon" ColumnName="LinkIcon" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="LinksEName" ColumnName="LinksEName" />
+          <ScalarProperty Name="LinksAName" ColumnName="LinksAName" />
+          <ScalarProperty Name="LinksID" ColumnName="LinksID" />
+          <ScalarProperty Name="FKModuleID" ColumnName="FKModuleID" />
+          <ScalarProperty Name="RoleEName" ColumnName="RoleEName" />
+          <ScalarProperty Name="RoleAName" ColumnName="RoleAName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMDatabases">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMDatabases">
+        <MappingFragment StoreEntitySet="ADMDatabases">
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="DataBaseName" ColumnName="DataBaseName" />
+          <ScalarProperty Name="DatabaseDescription" ColumnName="DatabaseDescription" />
+          <ScalarProperty Name="DatabaseId" ColumnName="DatabaseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLinkOptionsView">
+      <EntityTypeMapping TypeName="ActSysAdminModel.UserLinkOptionsView">
+        <MappingFragment StoreEntitySet="UserLinkOptionsView">
+          <ScalarProperty Name="AName" ColumnName="AName" />
+          <ScalarProperty Name="EName" ColumnName="EName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OptionEName" ColumnName="OptionEName" />
+          <ScalarProperty Name="OptionAName" ColumnName="OptionAName" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="RoleLinkOptionID" ColumnName="RoleLinkOptionID" />
+          <ScalarProperty Name="Arrange" ColumnName="Arrange" />
+          <ScalarProperty Name="RoleLinkID" ColumnName="RoleLinkID" />
+          <ScalarProperty Name="RoleEName" ColumnName="RoleEName" />
+          <ScalarProperty Name="RoleAName" ColumnName="RoleAName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ModuleUrl" ColumnName="ModuleUrl" />
+          <ScalarProperty Name="ModuleEName" ColumnName="ModuleEName" />
+          <ScalarProperty Name="ModuleAName" ColumnName="ModuleAName" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="FKModuleID" ColumnName="FKModuleID" />
+          <ScalarProperty Name="FKLinkCategoryID" ColumnName="FKLinkCategoryID" />
+          <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+          <ScalarProperty Name="ActiveLink" ColumnName="ActiveLink" />
+          <ScalarProperty Name="LinkIcon" ColumnName="LinkIcon" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="LinksEName" ColumnName="LinksEName" />
+          <ScalarProperty Name="LinksAName" ColumnName="LinksAName" />
+          <ScalarProperty Name="LinksID" ColumnName="LinksID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMUserSettings">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMUserSettings">
+        <MappingFragment StoreEntitySet="ADMUserSettings">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SettingsValue" ColumnName="SettingsValue" />
+          <ScalarProperty Name="SettingsName" ColumnName="SettingsName" />
+          <ScalarProperty Name="FKUserID" ColumnName="FKUserID" />
+          <ScalarProperty Name="UserSettingsID" ColumnName="UserSettingsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMAppSettings">
+      <EntityTypeMapping TypeName="ActSysAdminModel.ADMAppSettings">
+        <MappingFragment StoreEntitySet="ADMAppSettings">
+          <ScalarProperty Name="SettingPossibleValues" ColumnName="SettingPossibleValues" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="SettingValue" ColumnName="SettingValue" />
+          <ScalarProperty Name="SettingKey" ColumnName="SettingKey" />
+          <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

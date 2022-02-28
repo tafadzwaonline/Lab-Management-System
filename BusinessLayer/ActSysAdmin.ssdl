@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ActSysAdminModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMAppSettings">
+    <Key>
+      <PropertyRef Name="SettingKey" />
+    </Key>
+    <Property Name="SettingID" Type="int" Nullable="false" />
+    <Property Name="SettingKey" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SettingValue" Type="varchar" MaxLength="200" />
+    <Property Name="DefaultValue" Type="varchar" MaxLength="200" />
+    <Property Name="SettingPossibleValues" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ADMCategoryMaster">
+    <Key>
+      <PropertyRef Name="CategoryMasterID" />
+    </Key>
+    <Property Name="CategoryMasterID" Type="int" Nullable="false" />
+    <Property Name="CategoryMasterNameAr" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryMasterNameEn" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="100" />
+    <Property Name="FKModuleId" Type="int" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMDatabases">
+    <Key>
+      <PropertyRef Name="DatabaseId" />
+    </Key>
+    <Property Name="DatabaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DatabaseDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DataBaseName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServerName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ADMLinkCategory">
+    <Key>
+      <PropertyRef Name="LinkCategoryID" />
+    </Key>
+    <Property Name="LinkCategoryID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="8" />
+    <Property Name="LinkCategoryAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="LinkCategoryEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="3000" />
+    <Property Name="FKCategoryMasterID" Type="int" Nullable="false" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMLinks">
+    <Key>
+      <PropertyRef Name="LinksID" />
+    </Key>
+    <Property Name="LinksID" Type="int" Nullable="false" />
+    <Property Name="LinksAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="LinksEName" Type="nvarchar" MaxLength="350" />
+    <Property Name="Url" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="3000" />
+    <Property Name="LinkIcon" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ActiveLink" Type="bit" Nullable="false" />
+    <Property Name="MenuLink" Type="bit" Nullable="false" />
+    <Property Name="FKLinkCategoryID" Type="int" Nullable="false" />
+    <Property Name="FKModuleID" Type="int" Nullable="false" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMModules">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="8" />
+    <Property Name="ModuleAName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModuleEName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+    <Property Name="ModuleUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderNo" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMOption">
+    <Key>
+      <PropertyRef Name="OptionID" />
+    </Key>
+    <Property Name="OptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OptionAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="OptionEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="ADMReportPages">
+    <Key>
+      <PropertyRef Name="RPID" />
+    </Key>
+    <Property Name="RPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RPCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RPNameEn" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="RPNameAr" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="RPNotes" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMReports">
+    <Key>
+      <PropertyRef Name="ReportsID" />
+    </Key>
+    <Property Name="ReportsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportsCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ReportsNameEn" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ReportsNameAr" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ReportsNotes" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ReportUrl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="FKRreportCategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMReportsCategory">
+    <Key>
+      <PropertyRef Name="RCID" />
+    </Key>
+    <Property Name="RCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RCCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RCNameEn" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="RCNameAr" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="RCNotes" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="FKReportPageID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMRoleLink">
+    <Key>
+      <PropertyRef Name="RoleLinkID" />
+    </Key>
+    <Property Name="RoleLinkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKRoleID" Type="int" Nullable="false" />
+    <Property Name="FKLinkID" Type="int" Nullable="false" />
+    <Property Name="Arrange" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMRoleLinkOptions">
+    <Key>
+      <PropertyRef Name="RoleLinkOptionID" />
+    </Key>
+    <Property Name="RoleLinkOptionID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKRoleLinkID" Type="int" Nullable="false" />
+    <Property Name="FKOptionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMRoles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="8" />
+    <Property Name="RoleAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="RoleEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="3000" />
+    <Property Name="FKModuleID" Type="int" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMUserRoles">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKUserID" Type="int" Nullable="false" />
+    <Property Name="FKRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADMUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" />
+    <Property Name="EName" Type="nvarchar" MaxLength="80" />
+    <Property Name="AName" Type="nvarchar" MaxLength="80" />
+    <Property Name="Address" Type="nvarchar" MaxLength="80" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+    <Property Name="PreferedLanguage" Type="bit" />
+    <Property Name="DefaultModule" Type="int" />
+  </EntityType>
+  <EntityType Name="ADMUserSettings">
+    <Key>
+      <PropertyRef Name="UserSettingsID" />
+    </Key>
+    <Property Name="UserSettingsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKUserID" Type="int" />
+    <Property Name="SettingsName" Type="nvarchar" MaxLength="200" />
+    <Property Name="SettingsValue" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ActSysAdmin.dbo.RoleLinkOptionView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RoleLinkOptionView">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="RoleAName" />
+      <PropertyRef Name="RoleEName" />
+      <PropertyRef Name="LinksID" />
+      <PropertyRef Name="LinksAName" />
+      <PropertyRef Name="Url" />
+      <PropertyRef Name="LinkIcon" />
+      <PropertyRef Name="ActiveLink" />
+      <PropertyRef Name="MenuLink" />
+      <PropertyRef Name="FKLinkCategoryID" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="RoleLinkID" />
+      <PropertyRef Name="RoleLinkOptionID" />
+      <PropertyRef Name="OptionID" />
+      <PropertyRef Name="OptionAName" />
+      <PropertyRef Name="OptionEName" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="8" />
+    <Property Name="RoleAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="RoleEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="FKModuleID" Type="int" />
+    <Property Name="LinksID" Type="int" Nullable="false" />
+    <Property Name="LinksAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="LinksEName" Type="nvarchar" MaxLength="350" />
+    <Property Name="Url" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="LinkIcon" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ActiveLink" Type="bit" Nullable="false" />
+    <Property Name="MenuLink" Type="bit" Nullable="false" />
+    <Property Name="FKLinkCategoryID" Type="int" Nullable="false" />
+    <Property Name="Expr1" Type="int" Nullable="false" />
+    <Property Name="RoleLinkID" Type="int" Nullable="false" />
+    <Property Name="Arrange" Type="int" />
+    <Property Name="RoleLinkOptionID" Type="bigint" Nullable="false" />
+    <Property Name="OptionID" Type="int" Nullable="false" />
+    <Property Name="OptionAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="OptionEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ActSysAdmin.dbo.UserLinkOptionsView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserLinkOptionsView">
+    <Key>
+      <PropertyRef Name="LinksID" />
+      <PropertyRef Name="LinksAName" />
+      <PropertyRef Name="Url" />
+      <PropertyRef Name="LinkIcon" />
+      <PropertyRef Name="ActiveLink" />
+      <PropertyRef Name="MenuLink" />
+      <PropertyRef Name="FKLinkCategoryID" />
+      <PropertyRef Name="FKModuleID" />
+      <PropertyRef Name="ModuleID" />
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="RoleAName" />
+      <PropertyRef Name="RoleEName" />
+      <PropertyRef Name="RoleLinkID" />
+      <PropertyRef Name="RoleLinkOptionID" />
+      <PropertyRef Name="OptionID" />
+      <PropertyRef Name="OptionAName" />
+      <PropertyRef Name="OptionEName" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="LinksID" Type="int" Nullable="false" />
+    <Property Name="LinksAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="LinksEName" Type="nvarchar" MaxLength="350" />
+    <Property Name="Url" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="LinkIcon" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ActiveLink" Type="bit" Nullable="false" />
+    <Property Name="MenuLink" Type="bit" Nullable="false" />
+    <Property Name="FKLinkCategoryID" Type="int" Nullable="false" />
+    <Property Name="FKModuleID" Type="int" Nullable="false" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="ModuleAName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModuleEName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModuleUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="RoleEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="RoleLinkID" Type="int" Nullable="false" />
+    <Property Name="Arrange" Type="int" />
+    <Property Name="RoleLinkOptionID" Type="bigint" Nullable="false" />
+    <Property Name="OptionID" Type="int" Nullable="false" />
+    <Property Name="OptionAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="OptionEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="EName" Type="nvarchar" MaxLength="80" />
+    <Property Name="AName" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ActSysAdmin.dbo.ViewUserRolesList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ViewUserRolesList">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="RoleAName" />
+      <PropertyRef Name="RoleEName" />
+      <PropertyRef Name="UserType" />
+      <PropertyRef Name="FKLinkID" />
+      <PropertyRef Name="RoleLinkID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleAName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="RoleEName" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="FKModuleID" Type="int" />
+    <Property Name="UserRoleID" Type="int" />
+    <Property Name="FKLinkID" Type="int" Nullable="false" />
+    <Property Name="RoleLinkID" Type="int" Nullable="false" />
+    <Property Name="LinksEName" Type="nvarchar" MaxLength="350" />
+  </EntityType>
+  <Association Name="FK_ADMRoleLink_ADMLinks">
+    <End Role="ADMLinks" Type="Self.ADMLinks" Multiplicity="1" />
+    <End Role="ADMRoleLink" Type="Self.ADMRoleLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMLinks">
+        <PropertyRef Name="LinksID" />
+      </Principal>
+      <Dependent Role="ADMRoleLink">
+        <PropertyRef Name="FKLinkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMRoleLink_ADMRoles">
+    <End Role="ADMRoles" Type="Self.ADMRoles" Multiplicity="1" />
+    <End Role="ADMRoleLink" Type="Self.ADMRoleLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMRoles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="ADMRoleLink">
+        <PropertyRef Name="FKRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMRoleLinkOptions_ADMOption">
+    <End Role="ADMOption" Type="Self.ADMOption" Multiplicity="1" />
+    <End Role="ADMRoleLinkOptions" Type="Self.ADMRoleLinkOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMOption">
+        <PropertyRef Name="OptionID" />
+      </Principal>
+      <Dependent Role="ADMRoleLinkOptions">
+        <PropertyRef Name="FKOptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMRoleLinkOptions_ADMRoleLink">
+    <End Role="ADMRoleLink" Type="Self.ADMRoleLink" Multiplicity="1" />
+    <End Role="ADMRoleLinkOptions" Type="Self.ADMRoleLinkOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMRoleLink">
+        <PropertyRef Name="RoleLinkID" />
+      </Principal>
+      <Dependent Role="ADMRoleLinkOptions">
+        <PropertyRef Name="FKRoleLinkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMRoles_ADMCategoryMaster">
+    <End Role="ADMCategoryMaster" Type="Self.ADMCategoryMaster" Multiplicity="0..1" />
+    <End Role="ADMRoles" Type="Self.ADMRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMCategoryMaster">
+        <PropertyRef Name="CategoryMasterID" />
+      </Principal>
+      <Dependent Role="ADMRoles">
+        <PropertyRef Name="FKModuleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADMUserSettings_ADMUsers">
+    <End Role="ADMUsers" Type="Self.ADMUsers" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ADMUserSettings" Type="Self.ADMUserSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMUsers">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ADMUserSettings">
+        <PropertyRef Name="FKUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryMaster_Modules">
+    <End Role="ADMModules" Type="Self.ADMModules" Multiplicity="0..1" />
+    <End Role="ADMCategoryMaster" Type="Self.ADMCategoryMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMModules">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="ADMCategoryMaster">
+        <PropertyRef Name="FKModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LinkCategory_CategoryMaster">
+    <End Role="ADMCategoryMaster" Type="Self.ADMCategoryMaster" Multiplicity="1" />
+    <End Role="ADMLinkCategory" Type="Self.ADMLinkCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMCategoryMaster">
+        <PropertyRef Name="CategoryMasterID" />
+      </Principal>
+      <Dependent Role="ADMLinkCategory">
+        <PropertyRef Name="FKCategoryMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Links_LinkCategory">
+    <End Role="ADMLinkCategory" Type="Self.ADMLinkCategory" Multiplicity="1" />
+    <End Role="ADMLinks" Type="Self.ADMLinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMLinkCategory">
+        <PropertyRef Name="LinkCategoryID" />
+      </Principal>
+      <Dependent Role="ADMLinks">
+        <PropertyRef Name="FKLinkCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Links_Modules">
+    <End Role="ADMModules" Type="Self.ADMModules" Multiplicity="1" />
+    <End Role="ADMLinks" Type="Self.ADMLinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMModules">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="ADMLinks">
+        <PropertyRef Name="FKModuleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reports_ReportsCategory">
+    <End Role="ADMReportsCategory" Type="Self.ADMReportsCategory" Multiplicity="1" />
+    <End Role="ADMReports" Type="Self.ADMReports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMReportsCategory">
+        <PropertyRef Name="RCID" />
+      </Principal>
+      <Dependent Role="ADMReports">
+        <PropertyRef Name="FKRreportCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportsCategory_ReportPages">
+    <End Role="ADMReportPages" Type="Self.ADMReportPages" Multiplicity="1" />
+    <End Role="ADMReportsCategory" Type="Self.ADMReportsCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMReportPages">
+        <PropertyRef Name="RPID" />
+      </Principal>
+      <Dependent Role="ADMReportsCategory">
+        <PropertyRef Name="FKReportPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Role">
+    <End Role="ADMRoles" Type="Self.ADMRoles" Multiplicity="1" />
+    <End Role="ADMUserRoles" Type="Self.ADMUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMRoles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="ADMUserRoles">
+        <PropertyRef Name="FKRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users">
+    <End Role="ADMUsers" Type="Self.ADMUsers" Multiplicity="1" />
+    <End Role="ADMUserRoles" Type="Self.ADMUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMUsers">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ADMUserRoles">
+        <PropertyRef Name="FKUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Modules">
+    <End Role="ADMModules" Type="Self.ADMModules" Multiplicity="0..1" />
+    <End Role="ADMUsers" Type="Self.ADMUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMModules">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="ADMUsers">
+        <PropertyRef Name="DefaultModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ActSysAdminModelStoreContainer">
+    <EntitySet Name="ADMAppSettings" EntityType="Self.ADMAppSettings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMCategoryMaster" EntityType="Self.ADMCategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMDatabases" EntityType="Self.ADMDatabases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMLinkCategory" EntityType="Self.ADMLinkCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMLinks" EntityType="Self.ADMLinks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMModules" EntityType="Self.ADMModules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMOption" EntityType="Self.ADMOption" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMReportPages" EntityType="Self.ADMReportPages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMReports" EntityType="Self.ADMReports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMReportsCategory" EntityType="Self.ADMReportsCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMRoleLink" EntityType="Self.ADMRoleLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMRoleLinkOptions" EntityType="Self.ADMRoleLinkOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMRoles" EntityType="Self.ADMRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMUserRoles" EntityType="Self.ADMUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMUsers" EntityType="Self.ADMUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMUserSettings" EntityType="Self.ADMUserSettings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleLinkOptionView" EntityType="Self.RoleLinkOptionView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RoleLinkOptionView].[RoleID] AS [RoleID], 
+    [RoleLinkOptionView].[Code] AS [Code], 
+    [RoleLinkOptionView].[RoleAName] AS [RoleAName], 
+    [RoleLinkOptionView].[RoleEName] AS [RoleEName], 
+    [RoleLinkOptionView].[FKModuleID] AS [FKModuleID], 
+    [RoleLinkOptionView].[LinksID] AS [LinksID], 
+    [RoleLinkOptionView].[LinksAName] AS [LinksAName], 
+    [RoleLinkOptionView].[LinksEName] AS [LinksEName], 
+    [RoleLinkOptionView].[Url] AS [Url], 
+    [RoleLinkOptionView].[LinkIcon] AS [LinkIcon], 
+    [RoleLinkOptionView].[ActiveLink] AS [ActiveLink], 
+    [RoleLinkOptionView].[MenuLink] AS [MenuLink], 
+    [RoleLinkOptionView].[FKLinkCategoryID] AS [FKLinkCategoryID], 
+    [RoleLinkOptionView].[Expr1] AS [Expr1], 
+    [RoleLinkOptionView].[RoleLinkID] AS [RoleLinkID], 
+    [RoleLinkOptionView].[Arrange] AS [Arrange], 
+    [RoleLinkOptionView].[RoleLinkOptionID] AS [RoleLinkOptionID], 
+    [RoleLinkOptionView].[OptionID] AS [OptionID], 
+    [RoleLinkOptionView].[OptionAName] AS [OptionAName], 
+    [RoleLinkOptionView].[OptionEName] AS [OptionEName]
+    FROM [dbo].[RoleLinkOptionView] AS [RoleLinkOptionView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserLinkOptionsView" EntityType="Self.UserLinkOptionsView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserLinkOptionsView].[LinksID] AS [LinksID], 
+    [UserLinkOptionsView].[LinksAName] AS [LinksAName], 
+    [UserLinkOptionsView].[LinksEName] AS [LinksEName], 
+    [UserLinkOptionsView].[Url] AS [Url], 
+    [UserLinkOptionsView].[LinkIcon] AS [LinkIcon], 
+    [UserLinkOptionsView].[ActiveLink] AS [ActiveLink], 
+    [UserLinkOptionsView].[MenuLink] AS [MenuLink], 
+    [UserLinkOptionsView].[FKLinkCategoryID] AS [FKLinkCategoryID], 
+    [UserLinkOptionsView].[FKModuleID] AS [FKModuleID], 
+    [UserLinkOptionsView].[ModuleID] AS [ModuleID], 
+    [UserLinkOptionsView].[ModuleAName] AS [ModuleAName], 
+    [UserLinkOptionsView].[ModuleEName] AS [ModuleEName], 
+    [UserLinkOptionsView].[ModuleUrl] AS [ModuleUrl], 
+    [UserLinkOptionsView].[RoleID] AS [RoleID], 
+    [UserLinkOptionsView].[RoleAName] AS [RoleAName], 
+    [UserLinkOptionsView].[RoleEName] AS [RoleEName], 
+    [UserLinkOptionsView].[RoleLinkID] AS [RoleLinkID], 
+    [UserLinkOptionsView].[Arrange] AS [Arrange], 
+    [UserLinkOptionsView].[RoleLinkOptionID] AS [RoleLinkOptionID], 
+    [UserLinkOptionsView].[OptionID] AS [OptionID], 
+    [UserLinkOptionsView].[OptionAName] AS [OptionAName], 
+    [UserLinkOptionsView].[OptionEName] AS [OptionEName], 
+    [UserLinkOptionsView].[UserID] AS [UserID], 
+    [UserLinkOptionsView].[Code] AS [Code], 
+    [UserLinkOptionsView].[EName] AS [EName], 
+    [UserLinkOptionsView].[AName] AS [AName]
+    FROM [dbo].[UserLinkOptionsView] AS [UserLinkOptionsView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewUserRolesList" EntityType="Self.ViewUserRolesList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewUserRolesList].[RoleID] AS [RoleID], 
+    [ViewUserRolesList].[RoleAName] AS [RoleAName], 
+    [ViewUserRolesList].[RoleEName] AS [RoleEName], 
+    [ViewUserRolesList].[UserType] AS [UserType], 
+    [ViewUserRolesList].[FKModuleID] AS [FKModuleID], 
+    [ViewUserRolesList].[UserRoleID] AS [UserRoleID], 
+    [ViewUserRolesList].[FKLinkID] AS [FKLinkID], 
+    [ViewUserRolesList].[RoleLinkID] AS [RoleLinkID], 
+    [ViewUserRolesList].[LinksEName] AS [LinksEName]
+    FROM [dbo].[ViewUserRolesList] AS [ViewUserRolesList]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ADMRoleLink_ADMLinks" Association="Self.FK_ADMRoleLink_ADMLinks">
+      <End Role="ADMLinks" EntitySet="ADMLinks" />
+      <End Role="ADMRoleLink" EntitySet="ADMRoleLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMRoleLink_ADMRoles" Association="Self.FK_ADMRoleLink_ADMRoles">
+      <End Role="ADMRoles" EntitySet="ADMRoles" />
+      <End Role="ADMRoleLink" EntitySet="ADMRoleLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMRoleLinkOptions_ADMOption" Association="Self.FK_ADMRoleLinkOptions_ADMOption">
+      <End Role="ADMOption" EntitySet="ADMOption" />
+      <End Role="ADMRoleLinkOptions" EntitySet="ADMRoleLinkOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMRoleLinkOptions_ADMRoleLink" Association="Self.FK_ADMRoleLinkOptions_ADMRoleLink">
+      <End Role="ADMRoleLink" EntitySet="ADMRoleLink" />
+      <End Role="ADMRoleLinkOptions" EntitySet="ADMRoleLinkOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMRoles_ADMCategoryMaster" Association="Self.FK_ADMRoles_ADMCategoryMaster">
+      <End Role="ADMCategoryMaster" EntitySet="ADMCategoryMaster" />
+      <End Role="ADMRoles" EntitySet="ADMRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADMUserSettings_ADMUsers" Association="Self.FK_ADMUserSettings_ADMUsers">
+      <End Role="ADMUsers" EntitySet="ADMUsers" />
+      <End Role="ADMUserSettings" EntitySet="ADMUserSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryMaster_Modules" Association="Self.FK_CategoryMaster_Modules">
+      <End Role="ADMModules" EntitySet="ADMModules" />
+      <End Role="ADMCategoryMaster" EntitySet="ADMCategoryMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LinkCategory_CategoryMaster" Association="Self.FK_LinkCategory_CategoryMaster">
+      <End Role="ADMCategoryMaster" EntitySet="ADMCategoryMaster" />
+      <End Role="ADMLinkCategory" EntitySet="ADMLinkCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Links_LinkCategory" Association="Self.FK_Links_LinkCategory">
+      <End Role="ADMLinkCategory" EntitySet="ADMLinkCategory" />
+      <End Role="ADMLinks" EntitySet="ADMLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Links_Modules" Association="Self.FK_Links_Modules">
+      <End Role="ADMModules" EntitySet="ADMModules" />
+      <End Role="ADMLinks" EntitySet="ADMLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reports_ReportsCategory" Association="Self.FK_Reports_ReportsCategory">
+      <End Role="ADMReportsCategory" EntitySet="ADMReportsCategory" />
+      <End Role="ADMReports" EntitySet="ADMReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportsCategory_ReportPages" Association="Self.FK_ReportsCategory_ReportPages">
+      <End Role="ADMReportPages" EntitySet="ADMReportPages" />
+      <End Role="ADMReportsCategory" EntitySet="ADMReportsCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Role" Association="Self.FK_UserRoles_Role">
+      <End Role="ADMRoles" EntitySet="ADMRoles" />
+      <End Role="ADMUserRoles" EntitySet="ADMUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+      <End Role="ADMUsers" EntitySet="ADMUsers" />
+      <End Role="ADMUserRoles" EntitySet="ADMUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Modules" Association="Self.FK_Users_Modules">
+      <End Role="ADMModules" EntitySet="ADMModules" />
+      <End Role="ADMUsers" EntitySet="ADMUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="022a8f7eeafd45b09c936ace0f7fc63c" Name="Diagram1">
+        <EntityTypeShape EntityType="LabSysModel.AccreditionList" Width="1.5" PointX="3.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.AttachedFiles" Width="1.5" PointX="11" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.AttachFileTransTypes" Width="1.5" PointX="8.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ContractorsList" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.CustomersList" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.EmployeesList" Width="1.5" PointX="3.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.EnquiryDetails" Width="1.5" PointX="7.5" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.EnquiryMaster" Width="1.5" PointX="1.5" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.EquipmentsList" Width="1.5" PointX="3" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ExcelMappingFieldList" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.Invoice" Width="1.5" PointX="23.25" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ItemsList" Width="1.5" PointX="9" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.JobOrderMaster" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.LabsList" Width="1.5" PointX="0.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.MaterialsDetails" Width="1.5" PointX="5.25" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.MaterialsDetailsTests" Width="1.5" PointX="7.5" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.MaterialsTypes" Width="1.5" PointX="3" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.MaterialTypesCustomFields" Width="1.5" PointX="5.25" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.PaymentDetails" Width="1.5" PointX="25.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.PaymentMaster" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.PriceUnitList" Width="1.5" PointX="9" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ProjectsList" Width="1.5" PointX="1.5" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ProjectsTypes" Width="1.5" PointX="1.5" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.QuotationDetails" Width="1.5" PointX="12.75" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.QuotationMaster" Width="1.5" PointX="1.5" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.QuotationWorkOrderList" Width="1.5" PointX="15" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ReportGroup" Width="1.5" PointX="3.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.RSSDetails" Width="1.5" PointX="8.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.RSSMaster" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SampleReceiveList" Width="1.5" PointX="10.5" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SampleReceiveMaterialCustomField" Width="1.5" PointX="15.75" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SampleReceiveMaterialTableCustomField" Width="1.5" PointX="15.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SampleReceiveTestInvoice" Width="1.5" PointX="18" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SampleReceiveTestList" Width="1.5" PointX="15.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.SubcontractorsList" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TermsConditionList" Width="1.5" PointX="1.5" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestContractors" Width="1.5" PointX="8.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestEquipments" Width="1.5" PointX="13.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestExcelMapping" Width="1.5" PointX="8.25" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestItems" Width="1.5" PointX="11.25" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestPrices" Width="1.5" PointX="11.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TestsList" Width="1.5" PointX="6" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.TimesheetPaySlip" Width="1.5" PointX="22.5" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ValidityList" Width="1.5" PointX="3" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ValidityListDetails" Width="1.5" PointX="5.25" PointY="50.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.WorkOrderInvoice" Width="1.5" PointX="25.5" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.WorkOrderList" Width="1.5" PointX="20.25" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.WorkOrderTimeSheet" Width="1.5" PointX="22.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewBendingEnquiryMaster" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewEnquiryMaster" Width="1.5" PointX="8.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewExcelCellFieldMapping" Width="1.5" PointX="8.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewGelAllInvoice" Width="1.5" PointX="10.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewGetAllQuotationMasterHistory" Width="1.5" PointX="8.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewIdelJobOrder" Width="1.5" PointX="10.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewInvoicesBalance" Width="1.5" PointX="12.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewJobOrderList" Width="1.5" PointX="5.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewJobOrderMaster" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewJobOrderPendingToInvoicer" Width="1.5" PointX="12.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewJobOrderTestList" Width="1.5" PointX="14.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewN_OFUnPaidBills" Width="1.5" PointX="14.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewNewJobOrderMaster" Width="1.5" PointX="14.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewNewQuotationMaster" Width="1.5" PointX="14.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewPendingPayment" Width="1.5" PointX="11.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewQuotationDetails" Width="1.5" PointX="16.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewRSS" Width="1.5" PointX="5.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewSampleReceiveMaterialCustomField" Width="1.5" PointX="16.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewSampleReceiveTests" Width="1.5" PointX="16.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewTestPrices" Width="1.5" PointX="13.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewTestUnits" Width="1.5" PointX="15.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabSysModel.ViewWorkOrderList" Width="1.5" PointX="17.75" PointY="19.5" IsExpanded="true" />
+        <AssociationConnector Association="LabSysModel.FK_TestsData_AccreditionList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_AttachedFiles_AttachFileTransTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_ProjectsList_ContractorsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryMaster_CustomersList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderMaster_CustomersList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_PaymentMaster_CustomersList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationMaster_CustomersList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_CustomersList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EquipmentsList_EmployeesList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_RSSMaster_EmployeesList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_WorkOrderTimeSheet_EmployeesList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryDetails_EnquiryMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryDetails_MaterialsDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryDetails_MaterialsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryDetails_PriceUnitList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryDetails_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_EnquiryDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EnquiryMaster_ProjectsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationMaster_EnquiryMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_EquipmentsList_LabsData" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestEquipments_EquipmentsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_Invoice_JobOrderMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_PaymentDetails_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestInvoice_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_WorkOrderInvoice_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestItems_ItemsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderMaster_ProjectsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderMaster_QuotationMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_PaymentMaster_JobOrderMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_RSSMaster_JobOrderMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_JobOrderMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_MaterialsTypes_LabsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestsData_LabsData" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_ValidityList_LabsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_MaterialsDetails_MaterialsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_MaterialsDetailsTests_MaterialsDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_MaterialsDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_MaterialsDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_MaterialsDetailsTests_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_MaterialTypesCustomFields_MaterialsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_MaterialsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_MaterialsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveMaterialCustomField_MaterialTypesCustomFields" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveMaterialTableCustomField_MaterialTypesCustomFields" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_PaymentDetails_PaymentMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_PriceUnitList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_PriceUnitList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestList_PriceUnitList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestPrices_PriceUnitList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_ProjectsList_ProjectsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationMaster_ProjectsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_ProjectsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_QuotationMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationDetails_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationWorkOrderList_QuotationWorkOrderList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_QuotationMaster_TermsConditionList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestsList_ServiceGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_RSSDetails_RSSMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_RSSDetails_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_RSSMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_SampleReceiveList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveList_SampleReceiveList1" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveMaterialCustomField_SampleReceiveList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveMaterialTableCustomField_SampleReceiveList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestList_SampleReceiveList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestInvoice_SampleReceiveTestList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestList_SubcontractorsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_SampleReceiveTestList_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestContractors_SubContractorsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestContractors_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestEquipments_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestExcelMapping_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestItems_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TestPrices_TestsList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_TimesheetPaySlip_WorkOrderTimeSheet" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_ValidityListDetails_ValidityList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_WorkOrderInvoice_WorkOrderList" ManuallyRouted="false" />
+        <AssociationConnector Association="LabSysModel.FK_WorkOrderTimeSheet_WorkOrderList" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LabSysModel.JobOrderDetails" Width="1.5" PointX="15" PointY="22.875" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_JobOrderMaster" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_MaterialsDetails" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_MaterialsTypes" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_PriceUnitList" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_QuotationDetails" />
+        <AssociationConnector Association="LabSysModel.FK_JobOrderDetails_TestsList" />
+        <AssociationConnector Association="LabSysModel.FK_WorkOrderList_WorkOrderList" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

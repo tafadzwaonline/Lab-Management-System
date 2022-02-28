@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Visible="false" Text="" />
+  <DataConnections>
+    <DataConnection Name="localhost_Connection" ProviderKey="MSSqlServer">
+      <Parameters>
+        <Parameter Name="server" Value="DESKTOP-UIKU9MV" />
+        <Parameter Name="database" Value="SMSElite" />
+        <Parameter Name="useIntegratedSecurity" Value="True" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+    <DataConnection Name="localhost_SMSConnection" ProviderKey="MSSqlServer">
+      <Parameters>
+        <Parameter Name="server" Value="DESKTOP-UIKU9MV" />
+        <Parameter Name="database" Value="SMSElite" />
+        <Parameter Name="useIntegratedSecurity" Value="True" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="ViewAttendedStudent">
+      <DataProvider DataConnection="localhost_Connection">
+        <Selection>
+          <Table Name="ViewTotalStudentAttendPerSection">
+            <Columns>
+              <Column Name="TotalAbsent" Alias="TotalAbsent" />
+              <Column Name="Capacity" Alias="Capacity" />
+              <Column Name="SectionName" Alias="SectionName" />
+              <Column Name="TotalAttended" Alias="TotalAttended" />
+              <Column Name="Date" Alias="Date" />
+            </Columns>
+          </Table>
+          <Filters>
+            <Filter TableName="ViewTotalStudentAttendPerSection" FilterString="" />
+          </Filters>
+        </Selection>
+      </DataProvider>
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="[Date] == GetDate(Now())" DataType="DateTime" />
+      </CalculatedFields>
+    </DataSource>
+    <DataSource ComponentName="dataSource2" Name="ViewAbsentTeachers">
+      <DataProvider DataConnection="localhost_SMSConnection">
+        <Selection>
+          <Table Name="UnAttendedTeachers">
+            <Columns>
+              <Column Name="TeacherId" Alias="TeacherId" />
+              <Column Name="FullEnglishName" Alias="FullEnglishName" />
+              <Column Name="FullArabicName" Alias="FullArabicName" />
+            </Columns>
+          </Table>
+          <Filters>
+            <Filter TableName="UnAttendedTeachers" FilterString="" />
+          </Filters>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource ComponentName="dataSource3" Name="ViewAttendedStudentsByGrade">
+      <DataProvider DataConnection="localhost_Connection">
+        <Selection>
+          <Table Name="ViewAttendedStudentsByGrade">
+            <Columns>
+              <Column Name="GradeId" Alias="GradeId" />
+              <Column Name="TotalAttended" Alias="TotalAttended" />
+              <Column Name="Capacity" Alias="Capacity" />
+              <Column Name="TotalAbsent" Alias="TotalAbsent" />
+              <Column Name="Date" Alias="Date" />
+              <Column Name="GradeName" />
+            </Columns>
+          </Table>
+          <Filters>
+            <Filter TableName="ViewAttendedStudentsByGrade" FilterString="" />
+          </Filters>
+        </Selection>
+      </DataProvider>
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="[Date] == Now()" DataType="Boolean" />
+      </CalculatedFields>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Total Absent Students" DataSource="dataSource1">
+      <DataItems>
+        <Measure DataMember="SectionName" Name="Section Name" SummaryType="Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Capacity" UniqueName="DataItem1" />
+        <Dimension DataMember="TotalAbsent" Name="Total Absent" UniqueName="DataItem3" />
+        <Dimension DataMember="TotalAttended" Name="Total Attended" UniqueName="DataItem2" />
+      </DataItems>
+      <GridColumns>
+        <GridMeasureColumn Weight="77.965559950457461" AlwaysShowZeroLevel="true">
+          <Measure UniqueName="DataItem0" />
+        </GridMeasureColumn>
+        <GridDimensionColumn Weight="81.121898597626753">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="79.252067601582155">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="73.522713652163489">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="Manual" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="UnAttended Teachers" DataSource="dataSource2">
+      <DataItems>
+        <Dimension DataMember="FullEnglishName" Name="English Name" UniqueName="DataItem2" />
+        <Dimension DataMember="FullArabicName" Name="Arabic Name" UniqueName="DataItem3" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="English Name">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Arabic Name">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="Manual" />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Attended Students By Grade" DataSource="dataSource3">
+      <DataItems>
+        <Measure DataMember="Capacity" Name="Capacity" UniqueName="DataItem0" />
+        <Measure DataMember="TotalAbsent" Name="Total Absent" UniqueName="DataItem1" />
+        <Measure DataMember="TotalAttended" Name="Total Attended" UniqueName="DataItem2" />
+        <Dimension DataMember="GradeName" UniqueName="DataItem3" />
+        <Dimension DataMember="Date" DateTimeGroupInterval="None" UniqueName="DataItem4" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem3" />
+        <Argument UniqueName="DataItem4" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Capacity">
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" OverlappingMode="Reposition" />
+            </Simple>
+            <Simple Name="Total Attended">
+              <Value UniqueName="DataItem2" />
+            </Simple>
+            <Simple Name="Total Absent">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="49.53617810760668">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="45.454545454545453" />
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="54.545454545454547" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="50.46382189239332" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

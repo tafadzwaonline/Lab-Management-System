@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select "SampleReceiveList"."SampleID",
+       "SampleReceiveList"."SampleNo",
+       "SampleReceiveList"."ReceiveDate",
+       "SampleReceiveList"."FKJobOrderMasterID",
+       "SampleReceiveList"."FKCustomerID",
+       
+       "SampleReceiveList"."FKProjectID",
+       "SampleReceiveList"."ConsultantName",
+       "SampleReceiveList"."ConsultantMobile",
+       "SampleReceiveList"."SiteContactPerson",
+       "SampleReceiveList"."SiteContactMobile",
+       "SampleReceiveList"."DelivererName",
+       "SampleReceiveList"."DelivererMobile",
+       "SampleReceiveList"."Supplier",
+       "SampleReceiveList"."Source",
+       "SampleReceiveList"."SamplingDate",
+       "SampleReceiveList"."SampleDescription",
+       "SampleReceiveList"."SampleLocation",
+       "SampleReceiveList"."SampledByID",
+     "SampleReceiveList"."SampledByName",
+       "SampleReceiveList"."SiteRefNo",
+       "SampleReceiveList"."SampleBroughtInByID",
+       "SampleReceiveList"."SampleBroughtInByName",
+       "SampleReceiveList"."LayerNo",
+       "SampleReceiveList"."FKMaterialTypeID",
+       "SampleReceiveList"."FKMaterialDetailsID",
+       "SampleReceiveList"."MaterialClass",
+       "SampleReceiveList"."ReceivedQty",
+       "SampleReceiveList"."FKPriceUnitID",
+       "SampleReceiveList"."RetentionPeriod",
+       "SampleReceiveList"."SampleCondition",
+       "SampleReceiveList"."ConditionDetails",
+       "SampleReceiveList"."SampleBroughtInDate",
+       "SampleReceiveList"."SampleTemperature",
+       "SampleReceiveList"."ReceiveByName",
+          "ProjectsList"."ProjectID",
+       "ProjectsList"."ProjectCode",
+       "ProjectsList"."ProjectName",
+       "ProjectsList"."AshghalCode",
+       "ProjectsList"."StartDate",
+       "ProjectsList"."EndDate",
+       "ProjectsList"."ProjectLocation",
+       "ProjectsList"."FKProjectTypeID",
+       "ProjectsList"."ProjectConsultant",
+       "ProjectsList"."FKContractorID",
+       "ProjectsList"."ProjectOwner",
+       "ProjectsList"."IsClosed",
+       "PriceUnitList"."PriceUnitID",
+       "PriceUnitList"."UnitName",
+       "PriceUnitList"."UnitDescription",
+       "PriceUnitList"."UnitType",
+       "ProjectsTypes"."ProjectTypeName",
+       "MaterialsTypes"."MaterialName",
+       "MaterialsTypes"."MaterialTypeID",
+       "MaterialsDetails"."MaterialName" as "MaterialsDetails_MaterialName",
+       "CustomersList"."CustomerName",
+       "CustomersList"."CustomerCode",
+       "CustomersList"."PhoneNumber",
+       "CustomersList"."CustomerID",
+       "CustomersList"."FaxNumber",
+       "CustomersList"."POBox",
+       "CustomersList"."Email",
+       "CustomersList"."website",
+       "CustomersList"."ContactName",
+       "CustomersList"."ContactMobileNumber",
+       "CustomersList"."Address",
+       "CustomersList"."PaymentMode",
+       "CustomersList"."IsLocked",
+       "ContractorsList"."ContractorID",
+       "ContractorsList"."ContractorCode",
+       "ContractorsList"."ContractorName",
+       "ContractorsList"."ContractorCarrier",
+       "ContractorsList"."Location",
+       "ContractorsList"."GMName",
+       "ContractorsList"."MobileNumber",
+       "ContractorsList"."PhoneNumber" as "ContractorsList_PhoneNumber",
+       "ContractorsList"."FaxNumber" as "ContractorsList_FaxNumber",
+       "ContractorsList"."Email" as "ContractorsList_Email",
+       "ContractorsList"."website" as "ContractorsList_website",
+       "ContractorsList"."Address" as "ContractorsList_Address",
+       "ContractorsList"."IsLocked" as "ContractorsList_IsLocked",
+       "ContractorsList"."ContractorType",
+       "RSSMaster"."RSSNumber",
+	 "JobOrderMaster".JobOrderNumber
+
+,CASE    "SampleReceiveList"."RetentionPeriod"
+
+ WHEN '1' THEN '15 days'
+ WHEN '1' THEN '30 days'
+ WHEN '2' THEN '6 Months'
+END
+,dbo.getSampleBy("SampleReceiveList"."SampledByID") AS SampledBy  
+  from ((((((("dbo"."SampleReceiveList"
+       "SampleReceiveList"
+  left join "dbo"."ProjectsList" "ProjectsList"
+       on ("ProjectsList"."ProjectID" = "SampleReceiveList"."FKProjectID"))
+  left join "dbo"."PriceUnitList" "PriceUnitList"
+       on ("PriceUnitList"."PriceUnitID" = "SampleReceiveList"."FKPriceUnitID"))
+  left join "dbo"."ProjectsTypes" "ProjectsTypes"
+       on ("ProjectsTypes"."ProjectTypeID" = "ProjectsList"."FKProjectTypeID"))
+  left join "dbo"."MaterialsTypes"
+       "MaterialsTypes"
+       on ("MaterialsTypes"."MaterialTypeID" = "SampleReceiveList"."FKMaterialTypeID"))
+  left join "dbo"."MaterialsDetails"
+       "MaterialsDetails"
+       on (("MaterialsDetails"."FKMaterialTypeID" = "MaterialsTypes"."MaterialTypeID")
+       and ("MaterialsDetails"."MaterialDetailsID" = "SampleReceiveList"."FKMaterialDetailsID")))
+  left join "dbo"."CustomersList" "CustomersList"
+       on ("CustomersList"."CustomerID" = "SampleReceiveList"."FKCustomerID"))
+  left join "dbo"."ContractorsList"
+       "ContractorsList"
+       on ("ContractorsList"."ContractorID" = "ProjectsList"."FKContractorID"))
+ left join "dbo"."RSSMaster" "RSSMaster"
+              on ("RSSMaster"."RSSMasterId" = "SampleReceiveList"."FKRSSMasterId")
+ left join "dbo"."JobOrderMaster" "JobOrderMaster"
+              on ("JobOrderMaster"."JobOrderMasterID" = "SampleReceiveList"."FKJobOrderMasterID")</value>
+  </data>
+  <data name="customSqlQuery2.Sql" xml:space="preserve">
+    <value>select "SampleReceiveTestList"."SampleReceiveTestID",
+       "SampleReceiveTestList"."FKSampleID",
+       "SampleReceiveTestList"."FKTestID",
+       "SampleReceiveTestList"."FKPriceUnitID",
+       "SampleReceiveTestList"."Price",
+       "SampleReceiveTestList"."Qty",
+       "SampleReceiveTestList"."Witness",
+        "SampleReceiveTestList"."ReportNumber",
+      
+case 
+when "SampleReceiveTestList"."WitnessName" IS NULL  then '___'  
+else "SampleReceiveTestList"."WitnessName" end as "WitnessName",
+case 
+when "SampleReceiveTestList"."Subcontract" =0  then '___'  
+else "SubcontractorsList"."SubContractorName" end as "SubContractorName",
+    
+
+       "SampleReceiveTestList"."Subcontract",
+       "SampleReceiveTestList"."FKSubContractorID",
+       "SampleReceiveTestList"."Remarks",
+       "SampleReceiveTestList"."Inactive",
+       "SampleReceiveTestList"."IsInvoiced",
+       "PriceUnitList"."UnitName",
+       "TestsList"."TestName",
+ 
+       "TestsList"."StandardNumber"
+  from ((("dbo"."SampleReceiveTestList"
+       "SampleReceiveTestList"
+  left join "dbo"."PriceUnitList" "PriceUnitList"
+       on ("PriceUnitList"."PriceUnitID" = "SampleReceiveTestList"."FKPriceUnitID"))
+  left join "dbo"."TestsList" "TestsList"
+       on ("TestsList"."TestID" = "SampleReceiveTestList"."FKTestID"))
+  left join "dbo"."SubcontractorsList"
+       "SubcontractorsList"
+       on ("SubcontractorsList"."SubContractorID" = "SampleReceiveTestList"."FKSubContractorID"))</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlNhbXBsZVJlY2VpdmVMaXN0Ij48RmllbGQgTmFtZT0iU2FtcGxlSUQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJTYW1wbGVObyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJSZWNlaXZlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkZLSm9iT3JkZXJNYXN0ZXJJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IkZLQ3VzdG9tZXJJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZLUHJvamVjdElEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ29uc3VsdGFudE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29uc3VsdGFudE1vYmlsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXRlQ29udGFjdFBlcnNvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXRlQ29udGFjdE1vYmlsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZWxpdmVyZXJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlbGl2ZXJlck1vYmlsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdXBwbGllciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTb3VyY2UiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxpbmdEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iU2FtcGxlRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxlTG9jYXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxlZEJ5SUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxlZEJ5TmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXRlUmVmTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxlQnJvdWdodEluQnlJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTYW1wbGVCcm91Z2h0SW5CeU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGF5ZXJObyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGS01hdGVyaWFsVHlwZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRktNYXRlcmlhbERldGFpbHNJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik1hdGVyaWFsQ2xhc3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUmVjZWl2ZWRRdHkiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZLUHJpY2VVbml0SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJSZXRlbnRpb25QZXJpb2QiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTYW1wbGVDb25kaXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29uZGl0aW9uRGV0YWlscyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTYW1wbGVCcm91Z2h0SW5EYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iU2FtcGxlVGVtcGVyYXR1cmUiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlJlY2VpdmVCeU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvamVjdElEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUHJvamVjdENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvamVjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQXNoZ2hhbENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhcnREYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iRW5kRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlByb2plY3RMb2NhdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGS1Byb2plY3RUeXBlSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQcm9qZWN0Q29uc3VsdGFudCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGS0NvbnRyYWN0b3JJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlByb2plY3RPd25lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJc0Nsb3NlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iUHJpY2VVbml0SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJVbml0TmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVbml0RGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVW5pdFR5cGUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQcm9qZWN0VHlwZU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWF0ZXJpYWxOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1hdGVyaWFsVHlwZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTWF0ZXJpYWxzRGV0YWlsc19NYXRlcmlhbE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VzdG9tZXJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1c3RvbWVyQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQaG9uZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDdXN0b21lcklEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRmF4TnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBPQm94IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IndlYnNpdGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udGFjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udGFjdE1vYmlsZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZGRyZXNzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBheW1lbnRNb2RlIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iSXNMb2NrZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JDYXJyaWVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkxvY2F0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkdNTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNb2JpbGVOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udHJhY3RvcnNMaXN0X1Bob25lTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JzTGlzdF9GYXhOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udHJhY3RvcnNMaXN0X0VtYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JzTGlzdF93ZWJzaXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JzTGlzdF9BZGRyZXNzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRyYWN0b3JzTGlzdF9Jc0xvY2tlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQ29udHJhY3RvclR5cGUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJSU1NOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSm9iT3JkZXJOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sdW1uODQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FtcGxlZEJ5IiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlNhbXBsZVJlY2VpdmVNYXRlcmlhbEN1c3RvbUZpZWxkIj48RmllbGQgTmFtZT0iQ3VzdG9tRmllbGRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZLTWF0ZXJpYWxUeXBlSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJDdXN0b21GaWVsZE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGF0YVR5cGUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJc1JlcXVpcmVkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc0xvY2tlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iU2FtcGxlUmVjZWl2ZUNGTGlua0lEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iRmtTYW1wbGVJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IkZrQ3VzdG9tRmllbGRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlZhbHVlRGF0YSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJTYW1wbGVSZWNlaXZlTWF0ZXJpYWxUYWJsZUN1c3RvbUZpZWxkIj48RmllbGQgTmFtZT0iU2FtcGxlUmVjZWl2ZVRDRkxpbmtJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZrU2FtcGxlSUQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJGa0N1c3RvbUZpZWxkSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJWYWx1ZURhdGEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUm93SW5kZXgiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJDdXN0b21GaWVsZElEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRktNYXRlcmlhbFR5cGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkN1c3RvbUZpZWxkTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEYXRhVHlwZSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IklzUmVxdWlyZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzTG9ja2VkIiBUeXBlPSJCb29sZWFuIiAvPjwvVmlldz48VmlldyBOYW1lPSJTYW1wbGVSZWNlaXZlVGVzdExpc3QiPjxGaWVsZCBOYW1lPSJTYW1wbGVSZWNlaXZlVGVzdElEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iRktTYW1wbGVJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IkZLVGVzdElEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRktQcmljZVVuaXRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlByaWNlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJRdHkiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IldpdG5lc3MiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlJlcG9ydE51bWJlciIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IldpdG5lc3NOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN1YkNvbnRyYWN0b3JOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN1YmNvbnRyYWN0IiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJGS1N1YkNvbnRyYWN0b3JJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlJlbWFya3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW5hY3RpdmUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzSW52b2ljZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlVuaXROYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRlc3ROYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YW5kYXJkTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxSZWxhdGlvbiBOYW1lPSJGS19TYW1wbGVSZWNlaXZlVGVzdExpc3RfU2FtcGxlUmVjZWl2ZUxpc3QiIE1hc3Rlcj0iU2FtcGxlUmVjZWl2ZUxpc3QiIERldGFpbD0iU2FtcGxlUmVjZWl2ZVRlc3RMaXN0Ij48S2V5Q29sdW1uIE1hc3Rlcj0iU2FtcGxlSUQiIERldGFpbD0iRktTYW1wbGVJRCIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBOYW1lPSJGS19TYW1wbGVSZWNlaXZlTWF0ZXJpYWxUYWJsZUN1c3RvbUZpZWxkX1NhbXBsZVJlY2VpdmVMaXN0IiBNYXN0ZXI9IlNhbXBsZVJlY2VpdmVMaXN0IiBEZXRhaWw9IlNhbXBsZVJlY2VpdmVNYXRlcmlhbFRhYmxlQ3VzdG9tRmllbGQiPjxLZXlDb2x1bW4gTWFzdGVyPSJTYW1wbGVJRCIgRGV0YWlsPSJGa1NhbXBsZUlEIiAvPjwvUmVsYXRpb24+PFJlbGF0aW9uIE5hbWU9IkZLX1NhbXBsZVJlY2VpdmVNYXRlcmlhbEN1c3RvbUZpZWxkX1NhbXBsZVJlY2VpdmVMaXN0IiBNYXN0ZXI9IlNhbXBsZVJlY2VpdmVMaXN0IiBEZXRhaWw9IlNhbXBsZVJlY2VpdmVNYXRlcmlhbEN1c3RvbUZpZWxkIj48S2V5Q29sdW1uIE1hc3Rlcj0iU2FtcGxlSUQiIERldGFpbD0iRmtTYW1wbGVJRCIgLz48L1JlbGF0aW9uPjwvRGF0YVNldD4=</value>
+  </data>
+  <metadata name="realTimeSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+</root>
